@@ -44,7 +44,7 @@ const HomePage = ({ countries, setCountries }: Props) => {
 
 
   return (
-    <div className="px-8 h-[100%]">
+    <div className="px-8 min-h-screen">
       <Controls onSearh={handleSearch} />
 
       <List>

@@ -22,7 +22,7 @@ const Details = () => {
 
   return (
     <div 
-      className="px-8 h-[100%] bg-[#fafafa] dark:bg-secondary_dark"
+      className="px-8 min-h-screen bg-[#fafafa] dark:bg-secondary_dark"
     >
       <Button>
         <div 
@@ -33,11 +33,10 @@ const Details = () => {
           <span className="text-sm">Back</span>
         </div>
       </Button>
-      <div className="h-screen">
         {country && (
           <Info name={""} nativeName={""} population={0} region={""} subregion={""} capital={""} borders={[]} topLevelDomain={[]} currencies={[]} languages={[]} flag={""} navigate={navigate} {...country} />
         )}
-      </div>
+        
       
     </div>
   )

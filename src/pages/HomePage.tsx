@@ -5,7 +5,6 @@ import Controls from "@/components/Controls";
 import List from "@/components/List";
 import Card from "@/components/Card";
 import { ALL_COUNTRIES } from '@/config';
-import { useInView } from 'react-intersection-observer';
 
 type Props = {
   countries: Array<any>;
@@ -14,9 +13,7 @@ type Props = {
 
 const HomePage = ({ countries, setCountries }: Props) => {
   const [filteredCountries, setFilteredCountries] = useState(countries);
-  const { ref, inView } = useInView({
-    threshold: .2
-  })
+
   
   const navigate = useNavigate();
 

@@ -9,13 +9,12 @@ import { Country } from "@/models/models";
 
 
 const Details = () => {
-  let nameParams = useParams();
-  let name: any = nameParams.name
+  let { name } = useParams();
   const navigate = useNavigate();
   const [country, setCountry] = useState<Country[]>();
 
   useEffect(() => {
-    axios.get(searchByCountry(name)).then(
+    axios.get(searchByCountry(name || '')).then(
       ({data}) => setCountry(data[0])
     )
   }, [name]);
